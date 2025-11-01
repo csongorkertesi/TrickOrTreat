@@ -1,0 +1,107 @@
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --dark-primary: #1a1a1a;
+  --orange-primary: #FF8C00;
+  --orange-secondary: #ab6713;
+  --orange-ternary: #845011;
+  --white-primary: #fefefe;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: var(--dark-primary);
+  color: var(--white-primary);
+  margin: 0;
+}
+
+body * {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: var(--orange-primary);
+  color: #0e0e0e;
+  padding: 0.5rem;
+  box-shadow: 0 2px 5px black;
+  text-align: center;
+}
+
+@keyframes loading {
+  0% {
+    width: 8rem;
+  }
+  50% {
+    width: 12rem;
+    letter-spacing: 6px;
+  }
+  100% {
+    width: 8rem;
+  }
+}
+
+#loadingBar {
+  width: 8rem;
+  height: 2rem;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  background-color: var(--orange-primary);
+  color: var(--dark-primary);
+  text-align: center;
+  align-content: center;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.7);
+  animation: loading 1s infinite ease-in-out;
+}
+
+.summary {
+  text-align: center;
+  padding: 0.2rem;
+  margin-top: 0.5rem;
+}
+
+#cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background-color: var(--orange-primary);
+  border-radius: 15px;
+  padding: 1rem;
+  margin: 0.5rem;
+  color: var(--dark-primary);
+  box-shadow: 3px 3px 5px rgba(0,0,0,0.7);
+  width: 300px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.card button {
+  margin-top: auto;
+}
+
+.nocandy {
+  background-color: var(--orange-secondary);
+  box-shadow: inset 3px 3px 5px rgba(0,0,0,0.7);
+}
+
+.nocandy button {
+  background-color: var(--orange-ternary);
+}
+
+.lactoseFree {
+  -webkit-transform: scale(-1, 1);
+  -moz-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+
